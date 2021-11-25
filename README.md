@@ -18,7 +18,7 @@ To compile the simulation the first time:
     make -j
       
 For a visualisation of the setup:
-    ./OpPhoton
+        ./OpPhoton
       
 To simulate an vent, you can click on the green arrow at the top or type "/run/beamOn 1" in the Session box at the bottom.
  
