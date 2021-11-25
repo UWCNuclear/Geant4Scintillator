@@ -24,7 +24,7 @@ For a visualisation of the setup:
 
     ./OpPhoton
       
-To simulate an vent, you can click on the green arrow at the top or type "/run/beamOn 1" in the Session box at the bottom.
+To simulate an event, click on the green arrow at the top or type "/run/beamOn 1" in the Session box at the bottom.
  
 To open the macro and change the number of events to run:
 
