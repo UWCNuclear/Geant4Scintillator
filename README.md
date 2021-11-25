@@ -1,6 +1,6 @@
 ***The Geant4 meeting recordings are on the group Google Drive.***
 
-*Aliyu and Julien review the code in the first two videos :-)*
+*Aliyu and Julien review the code in the first two videos* :-)
 
 # Using York's OpPhoton code
 
