@@ -2,7 +2,7 @@
 
 *Aliyu and Julien review the code in the first two videos :-)*
 
-# Using York's Optical Photon code OpPhoton
+# Using York's OpPhoton code
 
 In the MANDELA desktop at UniZulu, The directory lives in the Ubuntu subsystem at:
 
