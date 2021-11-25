@@ -4,7 +4,7 @@
 
 # Using York's Optical Photon code OpPhoton
 
-The directory lives in the Ubuntu subsystem at:
+In the MANDELA desktop at UniZulu, The directory lives in the Ubuntu subsystem at:
 
     /G4/G4WORK/OpPhoton
 
