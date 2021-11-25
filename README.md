@@ -4,7 +4,7 @@
 
 # Using York's OpPhoton code
 
-In the MANDELA desktop at UniZulu, The directory lives in the Ubuntu subsystem at:
+In the MANDELA desktop at UniZulu, the directory lives in the Ubuntu subsystem at:
 
     /G4/G4WORK/OpPhoton
 
@@ -58,7 +58,7 @@ To adapt the analysis code for the parameters that you need (stick length, numbe
 
 ***More details:*** OpPhoton/README
 
-# Geant4 tips
+# Geant4 tips!
 
 - Geant4 assumes dimensions are in cm if the units are not specified. To be safe, always specify units using "star"m, "star"cm, "star"mm, etc.
 - To edit a line, first make a copy of the line and comment out the original line.
