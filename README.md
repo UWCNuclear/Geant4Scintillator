@@ -16,7 +16,7 @@ To edit the detector geometry:
     cd OpPhoton/src/
     gedit OpPhotonDetectorConstruction_EJ200.cc &
 
-To create a build directory:
+To create a build directory (the first time only):
 
     cd OpPhoton
     mkdir build
