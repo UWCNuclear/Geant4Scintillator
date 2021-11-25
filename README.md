@@ -12,7 +12,7 @@ In the MANDELA desktop at UniZulu, the directory lives in the Ubuntu subsystem a
 
 The detector construction is in:
 
-    /OpPhoton/src/OpPhotonDetectorConstruction_EJ200.cc
+    ~/G4/G4WORK/OpPhoton/src/OpPhotonDetectorConstruction_EJ200.cc
     
 To edit the detector geometry:
     cd OpPhoton/src/
@@ -20,7 +20,7 @@ To edit the detector geometry:
 
 To create a build directory (the first time only):
 
-    cd OpPhoton
+    cd ~/G4/G4WORK/OpPhoton
     mkdir build
     cd build
       
