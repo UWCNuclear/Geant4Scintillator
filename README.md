@@ -38,7 +38,9 @@ To simulate an event, click on the green arrow at the top or type "/run/beamOn 1
 To open the macro and change the number of events to run:
 
     gedit annihilGamma.mac &
-        
+
+*Before running the code,* make sure that you edit the name of the previous output file or it will get overwritten when the simulation runs again.
+
 To run the code:
 
     ./OpPhoton -m annihilGamma.mac
