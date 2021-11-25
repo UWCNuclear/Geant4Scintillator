@@ -37,7 +37,7 @@ To simulate an event, click on the green arrow at the top or type "/run/beamOn 1
  
 To open the macro and change the number of events to run:
 
-    gedit annihilGamma.mac
+    gedit annihilGamma.mac &
         
 To run the code:
 
@@ -50,7 +50,7 @@ To analyse the results:
         
 To adapt the analysis code for the parameters that you need (stick length, number of files to analyse, their names,  and the names of the output images):  
 
-    gedit OpPhoton.C
+    gedit OpPhoton.C &
     root -l OpPhoton.C
   
 
