@@ -11,15 +11,24 @@ In the MANDELA desktop at UniZulu, The directory lives in the Ubuntu subsystem a
 The detector construction is in:
 
     /OpPhoton/src/OpPhotonDetectorConstruction_EJ200.cc
+    
+To edit the detector geometry:
+    cd OpPhoton/src/
+    gedit OpPhotonDetectorConstruction_EJ200.cc &
 
-To compile the simulation the first time:
+To create a build directory:
 
     cd OpPhoton
     mkdir build
     cd build
+      
+To compile the simulation:
+
+    cd OpPhoton/build/
     cmake ..
     make -j
       
+
 For a visualisation of the setup:
 
     ./OpPhoton
@@ -50,5 +59,5 @@ To adapt the analysis code for the parameters that you need (stick length, numbe
 # Geant4 tips
 
 - Geant4 assumes dimensions are in cm if the units are not specified. To be safe, always specify units using "star"m, "star"cm, "star"mm, etc.
-
 - To edit a line, first make a copy of the line and comment out the original line.
+- Save different copies of OpPhoton.C to compare different parameters on the same plots.
