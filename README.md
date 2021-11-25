@@ -2,6 +2,8 @@
 
 *Aliyu and Julien review the code in the first two videos* :-)
 
+*Instructions to install Geant4 on Ubuntu:* https://github.com/UWCNuclear/UbuntuSetUp
+
 # Using York's OpPhoton code
 
 In the MANDELA desktop at UniZulu, the directory lives in the Ubuntu subsystem at:
