@@ -41,24 +41,26 @@ To open the macro and change the number of events to run:
 
     gedit annihilGamma.mac &
 
-***Before running the code,*** make sure that you edit the name of the previous output file or it will get overwritten when the simulation runs again.
+***Before running the code,*** make sure that you edit the name of the previous output file or it will get overwritten when the simulation runs again:
+
+    mv test.root ../output/test_SHAPE_LENGTH_REFLECTIVITY.root
 
 To run the code:
 
     ./OpPhoton -m annihilGamma.mac
         
+To adapt the analysis code for the parameters that you need (stick length, number of files to analyse, their names, and the names of the output images):  
+
+    mv test.root ../output/test_SHAPE_LENGTH_REFLECTIVITY.root
+    cd ../output
+    gedit OpPhoton.C &
+
 To analyse the results:
 
-    cd ../output
     root -l OpPhoton.C
-        
-To adapt the analysis code for the parameters that you need (stick length, number of files to analyse, their names,  and the names of the output images):  
-
-    gedit OpPhoton.C &
-    root -l OpPhoton.C
-  
-
+      
 ***More details:*** OpPhoton/README
+
 
 # Geant4 tips!
 
