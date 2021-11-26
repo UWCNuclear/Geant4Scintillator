@@ -55,6 +55,8 @@ To adapt the analysis code for the parameters that you need (stick length, numbe
     cd ../output
     gedit OpPhoton.C &
 
+Make sure to save different copies of OpPhoton.C to compare different parameters on the same plots.
+
 To analyse the results:
 
     root -l OpPhoton.C
@@ -66,4 +68,3 @@ To analyse the results:
 
 - Geant4 assumes dimensions are in cm if the units are not specified. To be safe, always specify units using "star"m, "star"cm, "star"mm, etc.
 - To edit a line, first make a copy of the line and comment out the original line.
-- Save different copies of OpPhoton.C to compare different parameters on the same plots.
