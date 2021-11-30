@@ -12,11 +12,11 @@ To move files from Windows to your home directory on Ubuntu, copy in the Ubuntu 
 
 In the MANDELA desktop at UniZulu, the directory lives in the Ubuntu subsystem at:
 
-    ~/G4/G4WORK/OpPhoton
+    ~/G4/OpPhoton
 
 The detector construction is in:
 
-    ~/G4/G4WORK/OpPhoton/src/OpPhotonDetectorConstruction_EJ200.cc
+    ~/G4/OpPhoton/src/OpPhotonDetectorConstruction_EJ200.cc
     
 To edit the detector geometry:
     cd OpPhoton/src/
@@ -24,7 +24,7 @@ To edit the detector geometry:
 
 To create a build directory (the first time only):
 
-    cd ~/G4/G4WORK/OpPhoton
+    cd ~/G4/OpPhoton
     mkdir build
     cd build
       
