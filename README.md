@@ -32,7 +32,7 @@ To compile the simulation:
 
     cd OpPhoton/build/
     cmake ..
-    make -j
+    clear && make -j4 (*4 is the number of cores in your computer)
       
 
 For a visualisation of the setup:
@@ -47,13 +47,13 @@ To open the macro and change the number of events to run:
 
 ***Before running the code,*** make sure that you edit the name of the previous output file or it will get overwritten when the simulation runs again:
 
-    mv test.root ../output/test_SHAPE_LENGTH_REFLECTIVITY.root
+    mv test.root ../output/test_SHAPE_LENGTH_REFLECTIVITY.root (e.g. test_Rod_10cm_975.root)
 
 To run the code:
 
     ./OpPhoton -m annihilGamma.mac
         
-To adapt the analysis code for the parameters that you need (stick length, number of files to analyse, their names, and the names of the output images):  
+To adapt the analysis code for the parameters that you need (stick length, number of files to analyse, their names, the names of the output images, and histogram legends):  
 
     mv test.root ../output/test_SHAPE_LENGTH_REFLECTIVITY.root
     cd ../output
