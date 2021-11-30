@@ -1,6 +1,6 @@
-***The Geant4 meeting recordings are on the group Google Drive.***
+*The Geant4 meeting recordings are on the group Google Drive.
 
-*Aliyu and Julien review the code in the first two videos* :-)
+***Aliyu and Julien review the code in the first two videos*** :-)
 
 *Instructions to install Geant4 on Ubuntu:* https://github.com/UWCNuclear/UbuntuSetUp
 
