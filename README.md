@@ -32,7 +32,7 @@ To compile the simulation:
 
     cd OpPhoton/build/
     cmake ..
-    clear && make -j4 (*4 is the number of cores in your computer)
+    make -j
       
 
 For a visualisation of the setup:
