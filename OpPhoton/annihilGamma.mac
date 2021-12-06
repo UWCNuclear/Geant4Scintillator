@@ -1,0 +1,13 @@
+/run/initialize
+
+# To set the primary particles as gamma
+/gun/particle gamma
+
+# Intital energy is the energy of annihilation gamma
+/gun/energy 511. keV
+/gun/direction 0. 0. 1.
+
+/run/printProgress 500
+
+# Number of gammas to be simulated
+/run/beamOn 20000

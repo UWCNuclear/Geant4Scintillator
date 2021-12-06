@@ -1,0 +1,132 @@
+================================================================================
+        Simulation of plastic scintillator sticks for PET application 
+                                2021 developments
+================================================================================
+
+                                README file
+
+               --------------------------------------------
+
+AUTHORS: Julien Bordes* (a), Aliyu Bala (a, b), Jamie Brown (a) and 
+David Jenkins (a)
+
+(a) Department of Physics, University of York, Heslington, York, UK
+(b) Usmanu Danfodiyo University, Sokoto, P.M.B 2346, Sokoto-Nigeria
+
+*email: julien.bordes@york.ac.uk
+
+--------------------------------------------------------------------------------
+
+----> INTRODUCTION
+
+This code simulates the optical photons created by a beam of 511 keV PET gammas 
+inside a plastic scintillator stick for PET application. The default stick 
+has a 3 * 3 mm2 squared section, a 10 cm length and is wrapped by PTFE with
+a reflectivity linearly varying between the stick entrance/exit (R = 0.900) and
+the center (R = 0.975).
+
+----> HOW TO RUN THE SIMULATION
+
+  cd OpPhoton
+  mkdir build
+  cd build
+  cmake ..
+  clear && make -j4
+
+- For a visualisation of the setup:
+
+  ./OpPhoton
+
+- In the window type:
+
+  /run/beamOn 1
+
+Gray = wrapper, yellow = stick, green = incoming annihilation gamma and
+cyan = optical photons.
+
+If the number of optical photons created is too high for the visualisation, you 
+can change the yield in the file "OpPhotonDetectorConstruction_EJ200.cc":
+
+  gedit ../src/OpPhotonDetectorConstruction_EJ200.cc 
+
+Around L. 133:
+
+myMPT1->AddConstProperty("SCINTILLATIONYIELD", 10000./MeV);
+
+set the yield to 500./MeV for example. Run again the commands:
+
+  clear && make -j4  
+  ./OpPhoton
+
+WARNING: before the next step, change the yield back to 10000./MeV and compile
+again:
+
+  clear && make -j4
+
+- For a high statistics simulation, without visualisation, the number of 
+particles can be modified in the macro "annihilGamma.mac". Use your text editor
+to open the macro and change the number of events to run:
+
+  gedit annihilGamma.mac
+
+By default, it is set to 200000 (depending on your computer, this might be too
+long for testing purpose).
+
+- Run the code:
+
+  ./OpPhoton -m annihilGamma.mac -t N
+
+N is the number of threads you wish to use (you can use this code on
+multitheading mode).
+
+WARNING: before running the new simulation, change the name of the output file
+(so it is not overwritten):
+
+  mv output.root newName.root
+
+Run a new simulation with a different parameter. For example with a different
+reflectivity. In the file "OpPhotonDetectorConstruction_EJ200.cc":
+
+  gedit ../src/OpPhotonDetectorConstruction_EJ200.cc
+
+----> HOW TO SET THE REFLECTIVITY
+
+To define a heterogeneous reflectivity, the wrapper is divided in 1 mm long
+elements, each being assigned a different reflectivity.
+
+The variation of the reflectivity vs the wrapper depth can be set by updating
+the function CalculateReflectivity around L. 338.
+
+By default, the reflectivity varies linearly between the wrapper entrance/exit
+(R = 0.900) and the center (R = 0.975).
+
+You can check the values of the reflectivity vs. the wrapper depth - when the
+simulations starts, scroll up in the terminal, until the following lines are
+displayed (reflectivity for each element of the wrapper):
+
+Stick depth (cm) = 0.05, reflectivity = 0.9015
+Stick depth (cm) = 0.15, reflectivity = 0.9045
+etc...
+
+----> HOW TO ANALYSE THE SIMULATION OUTPUT
+
+The files in the "output" folder demonstrates how to analyse the results:
+
+  cd ../output
+  root -l OpPhoton.C
+
+By default, it analyses the reference results for the 10 cm stick with four
+reflectivity constant along the stick (0.900, 0.925, 0.950 and 0.975).
+This records to .png images: the first with the optical photon counting, the
+second with their timing.
+
+Now, to analyse your results, move all your output files to the "output" folder:
+
+  mv ../build/*.root .
+
+At the top of the function OpPhoton() you can adapt the following parameters 
+to your need: stick length, number of files to analyse (up to four), their names
+ and the names of the output images. Run the updated code:
+  
+  gedit OpPhoton.C
+  root -l OpPhoton.C

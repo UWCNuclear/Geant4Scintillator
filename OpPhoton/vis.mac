@@ -1,0 +1,13 @@
+/control/verbose 2
+
+/run/initialize
+
+/vis/open OGL
+/vis/drawVolume
+
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA opticalphoton 0 1 1 1
+/vis/scene/endOfEventAction accumulate
+
+/run/beamOn 1
