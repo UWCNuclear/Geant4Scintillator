@@ -14,6 +14,7 @@ To move files from Windows to your home directory on Ubuntu, paste in your Ubunt
  
     cd ~/G4
     git clone https://github.com/UWCNuclear/Geant4Scintillator.git
+    mv OpPhoton ..
 
 # Using York's OpPhoton code
 
