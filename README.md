@@ -4,13 +4,16 @@
 
 *Instructions to install Geant4 on Ubuntu:* https://github.com/UWCNuclear/UbuntuSetUp
 
-To move files from Windows to your home directory on Ubuntu, copy in the Ubuntu terminal:
+To move files from Windows to your home directory on Ubuntu, paste in your Ubuntu terminal:
 
     mv /mnt/c/Users/PHYISICS/WHERE-IT-IS-ON-WINDOWS/filename ~
 
 # Downloading York's OpPhoton code
 
-
+ Paste in your terminal:
+ 
+    cd ~/G4
+    git clone https://github.com/UWCNuclear/Geant4Scintillator.git
 
 # Using York's OpPhoton code
 
