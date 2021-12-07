@@ -17,7 +17,7 @@ To move files from Windows to your home directory on Ubuntu, paste in your Ubunt
 
 # Using York's OpPhoton code
 
-In the MANDELA desktop at UniZulu, the directory lives in the Ubuntu subsystem at:
+The directory lives in the Ubuntu subsystem at:
 
     ~/G4/OpPhoton
 
